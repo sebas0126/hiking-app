@@ -7,6 +7,9 @@
   position: relative;
   background-color: var(--header-color);
   padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-main {
