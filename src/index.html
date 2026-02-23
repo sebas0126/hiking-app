@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suscripción | Atomic Design + MVC</title>
+
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-main">
+        <div class="header-logo-container">
+          <img
+            src="./assets/images/main-logo.svg"
+            alt="Senderismo"
+            class="header-logo"
+          />
+          <h1 class="header-title">Senderismo</h1>
+        </div>
+        <nav class="header-nav">
+          <div class="menu-icon-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="40"
+              height="40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="menu-icon"
+            >
+              <path d="M3 8h4.5l4.5 -5 l4.5 5h4.5" />
+              <line x1="3" y1="14" x2="21" y2="14" />
+              <line x1="3" y1="20" x2="21" y2="20" />
+            </svg>
+          </div>
+          <ul class="header-nav-list">
+            <li class="header-nav-item"><a href="#about-section">About</a></li>
+            <li class="header-nav-item">
+              <a href="#newsletter-section">Newsletter</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-content">
+        <section class="section" id="about-section">
+          <h2>What is Lorem Ipsum?</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+        </section>
+
+        <section class="section" id="newsletter-section">
+          <h2 class="a-title">¡Únete a nuestra comunidad!</h2>
+          <p class="a-text">Recibe las mejores noticias en tu correo.</p>
+
+          <form class="m-subscribe-form" id="subscribe-form">
+            <input
+              type="email"
+              class="a-input"
+              id="email-input"
+              placeholder="tu@email.com"
+              required
+            />
+
+            <button
+              type="submit"
+              class="a-button a-button--primary"
+              id="btn-subscribe"
+            >
+              Suscribirme
+            </button>
+          </form>
+
+          <p class="a-message" id="success-message"></p>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
