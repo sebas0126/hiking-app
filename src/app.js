@@ -1,9 +1,8 @@
-import { LandingModel } from './views/landing/landing.model'
-import { LandingView } from './views/landing/landing.view'
-import { LandingController } from './views/landing/landing.controller'
+import { HeaderModel, HeaderView, HeaderController } from './molecules/header/index.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const model = new LandingModel();
-  const view = new LandingView();
-  const controller = new LandingController(model, view);
+
+  const headerModel = new HeaderModel();
+  const headerView = new HeaderView();
+  new HeaderController(headerModel, headerView);
 });
