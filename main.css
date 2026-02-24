@@ -35,7 +35,7 @@ p {
   flex-direction: column;
   gap: 2rem;
   background-color: var(--section-background-color);
-  padding: 2rem;
+  padding: 1rem 4rem;
   box-shadow: 0 5px 20px rgba(53, 42, 34, 0.25);
   color: var(--section-text-color);
 }
