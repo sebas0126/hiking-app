@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suscripción | Atomic Design + MVC</title>
+    <title>Senderismo</title>
 
     <link rel="stylesheet" href="./main.css" />
   </head>
@@ -65,12 +65,12 @@
           </p>
           <h3>Características principales</h3>
           <ul>
-            <li>
+            <li class="list-item">
               <strong>Conexión con la naturaleza:</strong>
               Su objetivo principal es disfrutar del paisaje, observar la flora
               y fauna, y escapar del estrés urbano.
             </li>
-            <li>
+            <li class="list-item">
               <strong>Accesibilidad</strong>
               A diferencia del montañismo (que requiere técnicas y equipo de
               escalada) o el trekking de alta exigencia (rutas agrestes de
@@ -78,7 +78,7 @@
               establecidas o señalizadas, lo que lo hace adaptable a casi
               cualquier edad y condición física.
             </li>
-            <li>
+            <li class="list-item">
               <strong>Equipamiento básico:</strong>
               Generalmente se realiza en un solo día y solo requiere ropa
               cómoda, calzado adecuado con buen agarre, hidratación y protección
@@ -87,19 +87,19 @@
           </ul>
           <h3>Beneficios del senderismo</h3>
           <ul>
-            <li>
+            <li class="list-item">
               <strong>Salud física:</strong>
               Mejora la salud cardiovascular, tonifica los músculos
               (especialmente piernas y glúteos), mejora el equilibrio y ayuda a
               mantener un peso saludable.
             </li>
-            <li>
+            <li class="list-item">
               <strong>Salud mental:</strong>
               Reduce significativamente los niveles de estrés y ansiedad. El
               contacto directo con la naturaleza está comprobado que mejora el
               estado de ánimo y despeja la mente.
             </li>
-            <li>
+            <li class="list-item">
               <strong>Socialización:</strong>
               Es una excelente actividad para compartir tiempo de calidad con
               amigos, familia o grupos de caminantes.
@@ -181,6 +181,14 @@
           <section class="routes-container" id="route-1-section">
             <h3 class="routes-title">Buena Vista</h3>
             <div class="routes-content">
+              <img src="./assets/images/landscape-1.webp" alt="Senderismo" />
+              <p class="routes-description">
+                Una de las mejores experiencias de senderismo en el Eje Cafetero
+                se encuentra en Buenavista, un municipio conocido cariñosamente
+                como el "Balcón del Quindío" debido a su ubicación privilegiada
+                en lo alto de una colina de la Cordillera Central, lo que le
+                otorga las mejores vistas panorámicas de la región.
+              </p>
               <div class="routes-data">
                 <div class="routes-info">
                   <svg
@@ -202,19 +210,68 @@
                   </svg>
                   <span>3.5 km</span>
                 </div>
+                <div class="routes-info">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2C5E3B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="18" y="4" width="4" height="16" rx="1"></rect>
+                    <rect x="10" y="10" width="4" height="10" rx="1"></rect>
+                    <rect x="2" y="16" width="4" height="4" rx="1"></rect>
+                  </svg>
+                  <span>Fácil</span>
+                </div>
+                <div class="routes-info">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2C5E3B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>3 horas</span>
+                </div>
               </div>
-              <img
-                src="./assets/images/landscape-1-thumb.webp"
-                alt="Senderismo"
-              />
-              <p class="routes-description">
-                Una de las mejores experiencias de senderismo en el Eje Cafetero
-                se encuentra en Buenavista, un municipio conocido cariñosamente
-                como el "Balcón del Quindío" debido a su ubicación privilegiada
-                en lo alto de una colina de la Cordillera Central, lo que le
-                otorga las mejores vistas panorámicas de la región.
-              </p>
             </div>
+            <section class="routes-comments">
+              <ul class="routes-comments-list">
+                <li class="routes-comments-item">
+                  Excelente ruta, me encantó.
+                </li>
+                <li class="routes-comments-item">
+                  Excelente ruta, me encantó.
+                </li>
+                <li class="routes-comments-item">
+                  Excelente ruta, me encantó.
+                </li>
+                <li class="routes-comments-item">
+                  Excelente ruta, me encantó.
+                </li>
+              </ul>
+              <form class="routes-comments-form">
+                <textarea
+                  class="routes-comments-form-textarea"
+                  placeholder="Escribe tu comentario"
+                ></textarea>
+                <button type="submit" class="routes-comments-form-button">
+                  Enviar
+                </button>
+              </form>
+            </section>
           </section>
           <section class="routes-container" id="route-2-section">
             <h3>Ruta 2</h3>
