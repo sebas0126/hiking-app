@@ -178,109 +178,7 @@
 
         <section class="section" id="routes-section">
           <h2>Rutas</h2>
-          <section class="routes-container" id="route-1-section">
-            <h3 class="routes-title">Buena Vista</h3>
-            <div class="routes-content">
-              <img src="./assets/images/landscape-1.webp" alt="Senderismo" />
-              <p class="routes-description">
-                Una de las mejores experiencias de senderismo en el Eje Cafetero
-                se encuentra en Buenavista, un municipio conocido cariñosamente
-                como el "Balcón del Quindío" debido a su ubicación privilegiada
-                en lo alto de una colina de la Cordillera Central, lo que le
-                otorga las mejores vistas panorámicas de la región.
-              </p>
-              <div class="routes-data">
-                <div class="routes-info">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#2C5E3B"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="6" cy="19" r="3"></circle>
-                    <path
-                      d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"
-                    ></path>
-                    <circle cx="18" cy="5" r="3"></circle>
-                  </svg>
-                  <span>3.5 km</span>
-                </div>
-                <div class="routes-info">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#2C5E3B"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect x="18" y="4" width="4" height="16" rx="1"></rect>
-                    <rect x="10" y="10" width="4" height="10" rx="1"></rect>
-                    <rect x="2" y="16" width="4" height="4" rx="1"></rect>
-                  </svg>
-                  <span>Fácil</span>
-                </div>
-                <div class="routes-info">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#2C5E3B"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  <span>3 horas</span>
-                </div>
-              </div>
-            </div>
-            <section class="routes-comments">
-              <ul class="routes-comments-list">
-                <li class="routes-comments-item">
-                  Excelente ruta, me encantó.
-                </li>
-                <li class="routes-comments-item">
-                  Excelente ruta, me encantó.
-                </li>
-                <li class="routes-comments-item">
-                  Excelente ruta, me encantó.
-                </li>
-                <li class="routes-comments-item">
-                  Excelente ruta, me encantó.
-                </li>
-              </ul>
-              <form class="routes-comments-form">
-                <textarea
-                  class="routes-comments-form-textarea"
-                  placeholder="Escribe tu comentario"
-                ></textarea>
-                <button type="submit" class="routes-comments-form-button">
-                  Enviar
-                </button>
-              </form>
-            </section>
-          </section>
-          <section class="routes-container" id="route-2-section">
-            <h3>Ruta 2</h3>
-            <p>Descripción de la ruta 2</p>
-          </section>
-          <section class="routes-container" id="route-3-section">
-            <h3>Ruta 3</h3>
-            <p>Descripción de la ruta 3</p>
-          </section>
+          <div id="routes-container" class="routes-container"></div>
         </section>
 
         <section class="section" id="newsletter-section">
@@ -309,6 +207,100 @@
         </section>
       </div>
     </main>
+    <template id="route-card-template">
+      <section class="route" id="route-1-section">
+        <h3 class="route-title">Buena Vista</h3>
+        <div class="route-content">
+          <figure class="route-image">
+            <img src="./assets/images/landscape-1.webp" alt="Senderismo" />
+            <figcaption class="route-data">
+              <div class="route-info">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#2C5E3B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="6" cy="19" r="3"></circle>
+                  <path
+                    d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"
+                  ></path>
+                  <circle cx="18" cy="5" r="3"></circle>
+                </svg>
+                <span>3.5 km</span>
+              </div>
+              <div class="route-info">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#2C5E3B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="18" y="4" width="4" height="16" rx="1"></rect>
+                  <rect x="10" y="10" width="4" height="10" rx="1"></rect>
+                  <rect x="2" y="16" width="4" height="4" rx="1"></rect>
+                </svg>
+                <span>Fácil</span>
+              </div>
+              <div class="route-info">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#2C5E3B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>3 horas</span>
+              </div>
+            </figcaption>
+          </figure>
+          <p class="route-description">
+            Una de las mejores experiencias de senderismo en el Eje Cafetero se
+            encuentra en Buenavista, un municipio conocido cariñosamente como el
+            "Balcón del Quindío" debido a su ubicación privilegiada en lo alto
+            de una colina de la Cordillera Central, lo que le otorga las mejores
+            vistas panorámicas de la región.
+          </p>
+          <section class="route-comments">
+            <form class="route-comments-form">
+              <textarea
+                class="route-comments-textarea"
+                placeholder="Escribe tu comentario"
+              ></textarea>
+              <button type="submit" class="route-comments-button">
+                Enviar
+              </button>
+            </form>
+            <ul class="route-comments-list">
+              <li class="route-comments-item">
+                <strong>Juan Perez</strong>
+                <span class="route-comments-message"
+                  >Excelente ruta, me encantó.</span
+                >
+                <i class="route-comments-date">12/02/2026</i>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </template>
 
     <script type="module" src="./app.js"></script>
   </body>
