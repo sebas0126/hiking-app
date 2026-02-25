@@ -1,11 +1,19 @@
 @import url("./molecules/header/header.css");
 @import url("./organisms/gallery/gallery.css");
+@import url("./organisms/routes/routes.css");
+@import url("./organisms/route/route.css");
 
 :root {
   --header-color: #d4b895;
   --header-text-color: #352a22;
   --section-background-color: rgba(232, 225, 211, 0.95);
   --section-text-color: #352a22;
+  --button-background-color: #527E53;
+  --button-text-color: #FFFFFF;
+}
+
+html {
+  font-size: 18px;
 }
 
 body {
@@ -14,6 +22,7 @@ body {
   font-family: "Roboto", sans-serif;
   background: url("./assets/images/background.webp") no-repeat center center fixed;
   background-size: cover;
+  line-height: 1.5;
 }
 
 * {
@@ -40,12 +49,29 @@ p {
   color: var(--section-text-color);
 }
 
+.list-item {
+  margin-bottom: 1rem;
+}
+
+section:target {
+  animation: highlight 1s ease-in-out;
+}
+
+@keyframes highlight {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
 @media (max-width: 768px) {
   .main {
-    padding: 1rem;
+    padding: 0;
   }
 
   .main-content {
-    padding: 1rem;
+    padding: 2rem;
   }
 }
