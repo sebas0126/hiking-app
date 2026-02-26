@@ -44,7 +44,6 @@ p {
   flex-direction: column;
   gap: 2rem;
   background-color: var(--section-background-color);
-  padding: 1rem 4rem;
   box-shadow: 0 5px 20px rgba(53, 42, 34, 0.25);
   color: var(--section-text-color);
 }
@@ -58,12 +57,26 @@ section:target {
 }
 
 @keyframes highlight {
-  from {
+  0% {
     background-color: white;
   }
-  to {
+  25% {
+    background-color: var(--section-background-color);
+  }
+  50% {
+    background-color: white;
+  }
+  75% {
+    background-color: var(--section-background-color);
+  }
+  100% {
     background-color: transparent;
   }
+}
+
+.section {
+  scroll-margin-top: 54px;
+  padding: 0 4rem;
 }
 
 @media (max-width: 768px) {
