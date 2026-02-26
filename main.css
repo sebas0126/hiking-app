@@ -87,4 +87,8 @@ section:target {
   .main-content {
     padding: 2rem;
   }
+
+  .section {
+    padding: 0;
+  }
 }
