@@ -1,7 +1,13 @@
+import { LoadingView } from '../../atoms/loading/loading.view.js';
+import { LoadingController } from '../../atoms/loading/loading.controller.js';
+
 export class GalleryView {
   constructor(containerId) {
     this.rootContainer = document.getElementById(containerId);
     this.template = document.getElementById('gallery-template');
+
+    this.loadingView = new LoadingView(containerId);
+    this.loadingController = new LoadingController(this.loadingView);
   }
 
   render(galleryData) {
@@ -16,5 +22,13 @@ export class GalleryView {
 
   appendGalleryNode(galleryNode) {
     this.rootContainer.appendChild(galleryNode);
+  }
+
+  showLoading() {
+    this.loadingController.showLoading();
+  }
+
+  hideLoading() {
+    this.loadingController.hideLoading();
   }
 }

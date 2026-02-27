@@ -67,6 +67,7 @@
 }
 
 .heart-icon__active {
+  transform: scale(1.15);
   & path[d*="M20.84"] {
     fill: rgb(161, 218, 144);
   }
