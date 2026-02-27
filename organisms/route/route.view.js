@@ -14,8 +14,19 @@ export class RouteView {
 
     clone.querySelector('.route-title').textContent = routeData.title;
     clone.querySelector('.route-description').textContent = routeData.description;
+    clone.querySelector('.heart-icon').addEventListener('click', () => {
+      this.onAddLike();
+    });
 
-    const imgEl = clone.querySelector('.route-image img');
+    const heartCountEl = clone.querySelector('.heart-count');
+    this.likesCountEl = heartCountEl;
+    this.likesCountEl.textContent = routeData.likes;
+
+    if (routeData.isFavorite) {
+      clone.querySelector('.heart-icon').classList.add('heart-icon__active');
+    }
+
+    const imgEl = clone.querySelector('.route-header img');
     imgEl.src = routeData.image;
     imgEl.alt = routeData.title;
 
@@ -32,8 +43,8 @@ export class RouteView {
     this._renderCommentsList(routeData.comments);
 
     const formEl = clone.querySelector('.route-comments-form');
-    formEl.addEventListener('submit', (evento) => {
-      evento.preventDefault();
+    formEl.addEventListener('submit', (event) => {
+      event.preventDefault();
 
       const newCommentText = this.commentInputElement.value.trim();
 
@@ -57,7 +68,7 @@ export class RouteView {
 
       const span = document.createElement('span');
       span.className = 'route-comments-message';
-      span.textContent = comment.text;
+      span.textContent = comment.text + " — ";
 
       const i = document.createElement('i');
       i.className = 'route-comments-date';
@@ -65,7 +76,7 @@ export class RouteView {
 
       li.appendChild(strong);
       li.appendChild(span);
-      li.appendChild(i);
+      span.appendChild(i);
 
       this.commentsListElement.appendChild(li);
     });
@@ -76,7 +87,24 @@ export class RouteView {
     this.commentInputElement.value = '';
   }
 
+  updateLikes(updatedLikes) {
+    this.likesCountEl.textContent = updatedLikes;
+  }
+
+  updateFavoriteIds(updatedFavoriteIds, routeId) {
+    const heartIconEl = document.querySelector(`#route-${routeId}-section .heart-icon`);
+    if ( updatedFavoriteIds.includes(routeId)) {
+      heartIconEl.classList.add('heart-icon__active');
+    } else {
+      heartIconEl.classList.remove('heart-icon__active');
+    }
+  }
+
   bindAddComment(handler) {
     this.onSubmitComment = handler;
+  }
+
+  bindAddLike(handler) {
+    this.onAddLike = handler;
   }
 }

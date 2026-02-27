@@ -1,15 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap");
 @import url("./molecules/header/header.css");
 @import url("./organisms/gallery/gallery.css");
 @import url("./organisms/routes/routes.css");
 @import url("./organisms/route/route.css");
-@import url("./molecules/header/footer/footer.css");
+@import url("./molecules/footer/footer.css");
+@import url("./molecules/safety/safety.css");
+@import url("./molecules/about/about.css");
 
 :root {
+  --header-color: #d4b895;
+  --header-text-color: #352a22;
   --section-background-color: rgba(232, 225, 211, 0.95);
   --section-text-color: #352a22;
-  --button-background-color: #527E53;
-  --button-text-color: #FFFFFF;
+  --shadow-section: rgba(53, 42, 34, 0.25);
+
+  --button-background-color: #527e53;
+  --button-text-color: #ffffff;
+
+  --alternative-text-color: #424e45;
+  --text-dark: #1a202c;
+  --text-muted: #4a5568;
+  --text-subtitle: #2d3748;
+  --text-muted-light: #a0aec0;
+  --border-light: #edf2f7;
+
+  --accent-color: #e67e22;
+  --accent-bg-light: rgba(230, 126, 34, 0.1);
+  --accent-bg-medium: rgba(230, 126, 34, 0.15);
+
+  --footer-bg: #1c2329;
+  --footer-text: #e2e8f0;
+  --footer-titles: #f8ecdf;
+  --footer-accent: #e67e22;
+  --footer-input-bg: #2c3640;
+  --footer-border: #2d3748;
+
+  --white: #ffffff;
+  --white-05: rgba(255, 255, 255, 0.05);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --border-gray: #dee2e6;
+  --bg-light: #f8f9fa;
+  --gallery-placeholder-bg: #e9ecef;
+
+  --overlay-light: rgba(0, 0, 0, 0.05);
+  --shadow-header: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 4px rgba(0, 0, 0, 0.08);
+  --shadow-soft: rgba(0, 0, 0, 0.2);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-overlay: rgba(0, 0, 0, 0.5);
 }
 
 html {
@@ -40,9 +78,8 @@ p {
 .main-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   background-color: var(--section-background-color);
-  box-shadow: 0 5px 20px rgba(53, 42, 34, 0.25);
+  box-shadow: 0 5px 20px var(--shadow-section);
   color: var(--section-text-color);
   padding: 3rem 0 4rem 0;
 }
@@ -53,6 +90,18 @@ p {
 
 section:target {
   animation: highlight 1s ease-in-out;
+}
+
+.section {
+  scroll-margin-top: 64px;
+  padding: 2rem 4rem;
+}
+
+.section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 @keyframes highlight {
@@ -71,11 +120,6 @@ section:target {
   100% {
     background-color: transparent;
   }
-}
-
-.section {
-  scroll-margin-top: 54px;
-  padding: 0 4rem;
 }
 
 @media (max-width: 768px) {
