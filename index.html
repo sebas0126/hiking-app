@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Senderismo</title>
+    <title>Altivok</title>
     <link rel="stylesheet" href="./main.css" />
     <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
   </head>
@@ -12,16 +12,54 @@
       <div class="header-main">
         <div class="header-logo-container">
           <a href="#">
-            <img
-              src="./assets/images/main-logo.svg"
-              alt="Senderismo"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              width="45"
+              height="45"
               class="header-logo"
-            />
+            >
+              <line
+                x1="20"
+                y1="85"
+                x2="50"
+                y2="20"
+                stroke="#f8f9fa"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <line
+                x1="50"
+                y1="20"
+                x2="80"
+                y2="85"
+                stroke="#f8f9fa"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <polyline
+                points="35,85 50,55 65,85"
+                stroke="#e67e22"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+            </svg>
+            <h1 class="header-title">Altivok</h1>
           </a>
-          <h1 class="header-title">Senderismo</h1>
         </div>
-        <nav class="header-nav">
-          <button class="menu-button" id="menu-button">
+        <nav class="header-nav" aria-label="Navegación principal">
+          <button
+            class="menu-button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -39,7 +77,7 @@
               <line x1="3" y1="20" x2="21" y2="20" />
             </svg>
           </button>
-          <ul class="header-nav-list">
+          <ul class="header-nav-list" id="nav-list">
             <li class="header-nav-item">
               <a href="#about-section">Acerca de</a>
             </li>
@@ -48,7 +86,7 @@
             </li>
             <li class="header-nav-item"><a href="#routes-section">Rutas</a></li>
             <li class="header-nav-item">
-              <a href="#newsletter-section">Boletín</a>
+              <a href="#safety-section">Seguridad</a>
             </li>
           </ul>
         </nav>
@@ -57,6 +95,11 @@
     <main class="main">
       <div class="main-content">
         <section class="section" id="about-section">
+          <h2>Bienvenido a Altivok</h2>
+          <p>
+            Altivok es una aplicación que te permite explorar los mejores senderos de la región.
+            Descubre las mejores rutas de senderismo, consejos de seguridad y mucho más.
+          </p>
           <h2>¿Qué es el senderismo?</h2>
           <p>
             El senderismo (conocido en inglés como hiking) es una actividad
@@ -112,42 +155,187 @@
           <h2>Paisajes</h2>
           <div class="gallery-container" id="gallery-container"></div>
         </section>
-
         <section class="section" id="routes-section">
           <h2>Rutas</h2>
           <div id="routes-container" class="routes-container"></div>
         </section>
-
-        <section class="section" id="newsletter-section">
-          <h2 class="a-title">¡Únete a nuestra comunidad!</h2>
-          <p class="a-text">Recibe las mejores noticias en tu correo.</p>
-
-          <form class="m-subscribe-form" id="subscribe-form">
-            <input
-              type="email"
-              class="a-input"
-              id="email-input"
-              placeholder="tu@email.com"
-              required
-            />
-
-            <button
-              type="submit"
-              class="a-button a-button--primary"
-              id="btn-subscribe"
-            >
-              Suscribirme
-            </button>
-          </form>
-
-          <p class="a-message" id="success-message"></p>
+        <section class="section" id="safety-section">
+          <h2>Consejos de Seguridad</h2>
+          <p>
+            El senderismo es una actividad segura cuando se realizan en rutas
+            señalizadas y con equipamiento adecuado. Sin embargo, es importante
+            seguir algunas recomendaciones para disfrutar de la experiencia al
+            máximo.
+          </p>
+          <ul>
+            <li class="list-item">
+              <strong>Informarse sobre la ruta:</strong>
+              Antes de comenzar, consulta la información de la ruta, como la
+              distancia, el tiempo de duración y las condiciones del terreno.
+            </li>
+            <li class="list-item">
+              <strong>Llevar equipamiento adecuado:</strong>
+              Porta ropa cómoda, calzado adecuado con buen agarre, hidratación y
+              protección solar.
+            </li>
+            <li class="list-item">
+              <strong>Llevar agua y alimentos:</strong>
+              Porta agua y alimentos para el día de la ruta.
+            </li>
+            <li class="list-item">
+              <strong>Llevar un mapa:</strong>
+              Lleva un mapa de la ruta o descarga uno digital.
+            </li>
+            <li class="list-item">
+              <strong>Llevar un GPS:</strong>
+              Lleva un GPS para que no te pierdas y no te desvíes de la ruta.
+            </li>
+            <li class="list-item">
+              <strong>Llevar un paraguas:</strong>
+              Lleva un paraguas para protegerte del sol y la lluvia.
+            </li>
+            <li class="list-item">
+              <strong>Llevar un gafas:</strong>
+              Lleva un gafas para protegerte de la luz solar.
+            </li>
+            <li class="list-item">
+              <strong>Llevar un gorrito:</strong>
+              Lleva un gorrito para protegerte de la luz solar.
+            </li>
+            <li class="list-item">
+              <strong>Llevar un sudadera:</strong>
+              Lleva un sudadera para protegerte del frío.
+            </li>
+          </ul>
         </section>
       </div>
     </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column brand">
+          <a href="#" class="footer-logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              width="32"
+              height="32"
+            >
+              <line
+                x1="20"
+                y1="85"
+                x2="50"
+                y2="15"
+                stroke="#f8f9fa"
+                stroke-width="9"
+                stroke-linecap="round"
+              />
+              <line
+                x1="50"
+                y1="15"
+                x2="80"
+                y2="85"
+                stroke="#f8f9fa"
+                stroke-width="9"
+                stroke-linecap="round"
+              />
+              <polyline
+                points="35,85 50,55 65,85"
+                stroke="#e67e22"
+                stroke-width="9"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
+            ALTIVOK
+          </a>
+          <p>Domina la altura.</p>
+          <div class="social-media">
+            <a href="#" aria-label="Instagram"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"
+                ></path>
+                <polygon
+                  points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                ></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-column links">
+          <h3>EXPLORA</h3>
+          <ul>
+            <li><a href="#about-section">Acerca de</a></li>
+            <li><a href="#routes-section">Rutas Populares</a></li>
+            <li><a href="#gallery-section">Galería 360</a></li>
+            <li><a href="#safety-section">Consejos de Seguridad</a></li>
+          </ul>
+        </div>
+        <div class="footer-column newsletter">
+          <h3>Suscríbete para recibir nuevas rutas y aventuras</h3>
+          <form action="#" method="POST" class="newsletter-form">
+            <input type="email" placeholder="Enviar email address" required />
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Altivok - Donde el sendero se convierte en cumbre. Todos
+          los Derechos Reservados.
+        </p>
+        <div class="legal-links">
+          <a href="#">Aviso Legal</a>
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </footer>
     <template id="gallery-template">
       <div class="gallery-item">
         <a href="#route-1-section">
-          <img class="gallery-image" src="./assets/images/landscape-1-thumb.webp" alt="Senderismo" />
+          <img
+            class="gallery-image"
+            src="./assets/images/landscape-1-thumb.webp"
+            alt="Senderismo"
+          />
         </a>
       </div>
     </template>
@@ -230,8 +418,8 @@
               <li class="route-comments-item">
                 <strong>Juan Perez</strong>
                 <span class="route-comments-message"
-                  >Excelente ruta, me encantó.</span
-                >
+                  >Excelente ruta, me encantó.
+                </span>
                 <i class="route-comments-date">12/02/2026</i>
               </li>
             </ul>
