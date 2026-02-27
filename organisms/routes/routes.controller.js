@@ -11,8 +11,12 @@ export class RoutesController {
 
   async init() {
     const routesData = await this.model.fetchAllRoutes();
+    const favoriteRoutesData = await this.model.fetchFavoriteRoutes();
 
     routesData.forEach(data => {
+      if (favoriteRoutesData.some(favoriteRoute => favoriteRoute.id === data.id)) {
+        data.isFavorite = true;
+      }
       const childModel = new RouteModel(data);
       const childView = new RouteView();
       const childController = new RouteController(childModel, childView);
