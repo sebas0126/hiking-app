@@ -3,6 +3,7 @@
   flex-direction: column;
   border-bottom: 1px solid var(--header-color);
   padding-bottom: 1.5rem;
+  scroll-margin-top: 54px;
 }
 
 .route:last-child {
@@ -13,6 +14,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.route-title {
+  text-align: center;
 }
 
 .route-image {
@@ -30,6 +35,7 @@
   width: 70%;
   object-fit: cover;
   border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .route-description {
@@ -45,7 +51,8 @@
 
 .route-info {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   align-items: center;
   white-space: nowrap;
   width: 100%;
@@ -95,7 +102,7 @@
   padding: 0.25rem 0.5rem;
   background-color: #f8f9fa;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   width: fit-content;
   position: relative;
 }
@@ -103,12 +110,12 @@
 .route-comments-message::before {
   content: "";
   position: absolute;
-  left: -2px;
-  top: 10px;
+  left: -6px;
+  top: 50%;
   width: 10px;
   height: 10px;
   background-color: #f8f9fa;
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-50%);
 }
 
 .route-comments-list {
@@ -118,4 +125,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  max-height: 300px;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .route-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

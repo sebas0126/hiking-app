@@ -7,4 +7,12 @@ export class HeaderModel {
     this.isMenuOpen = !this.isMenuOpen;
     return this.isMenuOpen;
   }
+
+  closeMenu() {
+    if (this.isMenuOpen) {
+      this.isMenuOpen = false;
+      return true;
+    }
+    return false;
+  }
 }

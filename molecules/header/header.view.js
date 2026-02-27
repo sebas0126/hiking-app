@@ -10,6 +10,15 @@ export class HeaderView {
     });
   }
 
+  bindClickOutside(handler) {
+    document.addEventListener('click', (event) => {
+      const isClickOnButton = this.menuButton.contains(event.target);
+      if (!isClickOnButton) {
+        handler();
+      }
+    });
+  }
+
   updateMenuState(isMenuOpen) {
     if (isMenuOpen) {
       this.menuButton.setAttribute('aria-expanded', 'true');

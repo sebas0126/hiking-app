@@ -1,5 +1,3 @@
-// js/views/RouteView.js
-
 export class RouteView {
   constructor() {
     this.template = document.getElementById('route-card-template');
