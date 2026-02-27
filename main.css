@@ -6,6 +6,7 @@
 @import url("./molecules/footer/footer.css");
 @import url("./molecules/safety/safety.css");
 @import url("./molecules/about/about.css");
+@import url("./atoms/loading/loading.css");
 
 :root {
   --header-color: #d4b895;

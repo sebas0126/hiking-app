@@ -641,6 +641,46 @@
         </div>
       </section>
     </template>
+    <template id="loading-template">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        width="60"
+        height="60"
+        fill="none"
+        class="loading-altivok"
+      >
+        <g class="loading-group">
+          <polyline
+            points="20,85 50,20 80,85"
+            stroke="#2c3e50"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="base-mountain"
+          />
+
+          <polyline
+            points="20,85 50,20 80,85"
+            stroke="#e67e22"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="active-trail"
+          />
+
+          <polyline
+            points="35,85 50,55 65,85"
+            stroke="#edf2f7"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            class="base-snow"
+          />
+        </g>
+      </svg>
+    </template>
 
     <script type="module" src="./app.js"></script>
   </body>

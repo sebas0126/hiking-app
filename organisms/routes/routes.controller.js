@@ -10,8 +10,11 @@ export class RoutesController {
   }
 
   async init() {
+    this.view.showLoading();
     const routesData = await this.model.fetchAllRoutes();
     const favoriteRoutesData = await this.model.fetchFavoriteRoutes();
+
+    this.view.hideLoading();
 
     routesData.forEach(data => {
       if (favoriteRoutesData.some(favoriteRoute => favoriteRoute.id === data.id)) {
