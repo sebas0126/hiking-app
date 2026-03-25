@@ -1,12 +1,10 @@
-name: Deploy a GitHub Pages con Envs
-
+name: Deploy con Envs
 on:
   push:
-    branches:
-      - main # Asegúrate de que este sea el nombre de tu rama principal
+    branches: [main]
 
 permissions:
-  contents: write
+  contents: write # Necesario para crear/escribir en la rama gh-pages
 
 jobs:
   build-and-deploy:
@@ -21,8 +19,8 @@ jobs:
             API_HOSTNAME: '${{ secrets.API_HOSTNAME }}'
           };" > env-config.js
 
-      - name: Deploy a GitHub Pages 🚀
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: . # Si tu HTML está en una subcarpeta (ej: 'dist'), cámbialo aquí
-          branch: gh-pages # GitHub Actions creará esta rama para el hosting
+          folder: .
+          branch: gh-pages
