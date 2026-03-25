@@ -1,10 +1,12 @@
+import { API_HOSTNAME } from '../config.js';
+
 export const getRoutes = async () => {
-  const response = await fetch('https://hiking-service.onrender.com/api/routes');
+  const response = await fetch(`${API_HOSTNAME}/api/trails`);
   return response.json();
 };
 
 export const updateRoute = async (id, data) => {
-  const response = await fetch(`https://hiking-service.onrender.com/api/routes/${id}`, {
+  const response = await fetch(`${API_HOSTNAME}/api/trails/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json'
@@ -18,7 +20,7 @@ export const toggleFavorite = async (routeId) => {
   const userId = getUserId();
 
   try {
-    const response = await fetch(`https://hiking-service.onrender.com/api/routes/${routeId}/favorite`, {
+    const response = await fetch(`${API_HOSTNAME}/api/favorites/${routeId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -35,7 +37,7 @@ export const toggleFavorite = async (routeId) => {
 
 export const getFavoriteRoutes = async () => {
   const userId = getUserId();
-  const response = await fetch(`https://hiking-service.onrender.com/api/favorites`, {
+  const response = await fetch(`${API_HOSTNAME}/api/favorites`, {
     headers: {
       'x-user-id': userId
     }

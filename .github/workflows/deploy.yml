@@ -1,0 +1,28 @@
+name: Deploy a GitHub Pages con Envs
+
+on:
+  push:
+    branches:
+      - main # Asegúrate de que este sea el nombre de tu rama principal
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Crear env-config.js 🛠️
+        run: |
+          echo "window._env_ = { 
+            API_HOSTNAME: '${{ secrets.API_HOSTNAME }}'
+          };" > env-config.js
+
+      - name: Deploy a GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # Si tu HTML está en una subcarpeta (ej: 'dist'), cámbialo aquí
+          branch: gh-pages # GitHub Actions creará esta rama para el hosting

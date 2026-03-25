@@ -8,20 +8,21 @@ export class RouteModel {
 
   async addComment(commentText) {
     const updatedRoute = await updateRoute(this.data.id, {
-      newComment: {
+      comments: [...this.data.comments, {
         author: "Anonimo",
-        text: commentText
-      }
+        text: commentText,
+        date: new Date().toLocaleDateString()
+      }]
     });
-    return updatedRoute.route.comments;
+    return updatedRoute.comments;
   }
 
   async toggleLike() {
     const updatedRoute = await updateRoute(this.data.id, {
       likes: this.data.isFavorite ? this.data.likes - 1 : this.data.likes + 1
     });
-    this.data.likes = updatedRoute.route.likes;
-    return updatedRoute.route.likes;
+    this.data.likes = updatedRoute.likes;
+    return updatedRoute.likes;
   }
 
   async toggleFavorite() {
