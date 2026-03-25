@@ -1,0 +1,38 @@
+ <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              width="45"
+              height="45"
+              class="header-logo"
+            >
+              <line
+                x1="20"
+                y1="85"
+                x2="50"
+                y2="20"
+                stroke="#f8f9fa"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <line
+                x1="50"
+                y1="20"
+                x2="80"
+                y2="85"
+                stroke="#f8f9fa"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <polyline
+                points="35,85 50,55 65,85"
+                stroke="#e67e22"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+            </svg>

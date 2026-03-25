@@ -1,0 +1,230 @@
+.route {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--header-color);
+  padding-bottom: 1.5rem;
+  scroll-margin-top: 84px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.route:last-child {
+  border-bottom: none;
+}
+
+.route-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-50);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.route-title {
+  text-align: center;
+  margin-right: auto;
+}
+
+.route-header {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin: 0;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.heart-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--white-50);
+  border-radius: 16px;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.heart-count {
+  font-weight: 600;
+}
+
+.heart-icon {
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s ease;
+}
+
+.heart-icon:hover {
+  transform: scale(1.15);
+  & path[d*="M20.84"] {
+    fill: rgba(44, 62, 80, 0.1);
+  }
+  
+  & polyline[points*="9,16"] {
+    fill: rgba(230, 126, 34, 0.2);
+  }
+}
+
+.heart-icon__active {
+  transform: scale(1.15);
+  & path[d*="M20.84"] {
+    fill: rgb(161, 218, 144);
+  }
+  
+  & polyline[points*="9,16"] {
+    fill: rgba(44, 62, 80, 0.1);
+  }
+}
+.route-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.route-header:hover {
+  transform: scale(1.01);
+}
+
+.route-description {
+  text-align: justify;
+  width: 100%;
+}
+
+.route-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.route-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.route-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  white-space: nowrap;
+  color: var(--button-background-color);
+  font-weight: 600;
+}
+
+.route-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--header-color);
+  padding: 0.25rem;
+}
+
+.route-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 1rem 2rem;
+}
+
+.route-comments-form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.route-comments-textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-gray);
+  resize: none;
+  padding: 0.5rem;
+}
+
+.route-comments-button {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-gray);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.route-comments-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.route-comments-message {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--bg-light);
+  border-radius: 12px;
+  box-shadow: 0 1px 1px var(--shadow-light);
+  width: fit-content;
+  position: relative;
+}
+
+.route-comments-message::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: var(--bg-light);
+  transform: rotate(45deg) translateY(-50%);
+}
+
+.route-comments-list {
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.route-comments-date {
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: var(--alternative-text-color);
+}
+
+.route-divider {
+  border: 0;
+  height: 1px;
+  background: var(--button-text-color);
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .route-body {
+    padding: 1rem;
+  }
+
+  .route-comments {
+    padding: 1rem;
+  }
+
+  .route-info-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

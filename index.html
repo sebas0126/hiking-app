@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Altivok</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-main">
+        <div class="header-logo-container">
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              width="45"
+              height="45"
+              class="header-logo"
+            >
+              <line
+                x1="20"
+                y1="85"
+                x2="50"
+                y2="20"
+                stroke="#f8f9fa"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <line
+                x1="50"
+                y1="20"
+                x2="80"
+                y2="85"
+                stroke="#f8f9fa"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <polyline
+                points="35,85 50,55 65,85"
+                stroke="#e67e22"
+                stroke-width="8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+            </svg>
+            <h1 class="header-title">Altivok</h1>
+          </a>
+        </div>
+        <nav class="header-nav" aria-label="Navegación principal">
+          <button
+            class="menu-button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="40"
+              height="40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="menu-icon"
+            >
+              <path d="M3 8h4.5l4.5 -5 l4.5 5h4.5" />
+              <line x1="3" y1="14" x2="21" y2="14" />
+              <line x1="3" y1="20" x2="21" y2="20" />
+            </svg>
+          </button>
+          <ul class="header-nav-list" id="nav-list">
+            <li class="header-nav-item">
+              <a href="#about-section">Acerca de</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#gallery-section">Paisajes</a>
+            </li>
+            <li class="header-nav-item"><a href="#routes-section">Rutas</a></li>
+            <li class="header-nav-item">
+              <a href="#safety-section">Seguridad</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-content">
+        <section class="about-section" id="about-section">
+          <div class="about-container">
+            <header class="about-header">
+              <h2 class="about-title">Bienvenido a <span>Altivok</span></h2>
+              <p class="about-description">
+                Altivok es una aplicación que te permite explorar los mejores
+                senderos de la región. Descubre las mejores rutas de senderismo,
+                consejos de seguridad y mucho más.
+              </p>
+            </header>
+
+            <article class="about-definition">
+              <h2 class="about-subtitle">¿Qué es el senderismo?</h2>
+              <p>
+                El senderismo (conocido en inglés como <em>hiking</em>) es una
+                actividad deportiva y recreativa no competitiva que consiste en
+                caminar siguiendo un itinerario por caminos, senderos o rutas
+                ecológicas, generalmente en entornos naturales como montañas,
+                bosques, valles o parques nacionales.
+              </p>
+            </article>
+
+            <div class="about-details">
+              <div class="about-detail">
+                <h3 class="about-subtitle">Características principales</h3>
+                <ul class="about-list">
+                  <li>
+                    <div class="about-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      >
+                        <path
+                          d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                        />
+                      </svg>
+                    </div>
+                    <div class="about-content">
+                      <strong>Conexión con la naturaleza</strong>
+                      <p>
+                        Su objetivo principal es disfrutar del paisaje, observar
+                        la flora y fauna, y escapar del estrés urbano.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="about-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 8v4l3 3" />
+                      </svg>
+                    </div>
+                    <div class="about-content">
+                      <strong>Accesibilidad</strong>
+                      <p>
+                        A diferencia del montañismo, suele practicarse en rutas
+                        establecidas, haciéndolo adaptable a casi cualquier edad
+                        y condición física.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="about-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      >
+                        <path
+                          d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="about-content">
+                      <strong>Equipamiento básico</strong>
+                      <p>
+                        Generalmente se realiza en un solo día y solo requiere
+                        ropa cómoda, calzado adecuado, hidratación y protección
+                        solar.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="about-detail">
+                <h3 class="about-subtitle">Beneficios del senderismo</h3>
+                <ul class="about-list">
+                  <li>
+                    <div class="about-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      >
+                        <path
+                          d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="about-content">
+                      <strong>Salud física</strong>
+                      <p>
+                        Mejora la salud cardiovascular, tonifica los músculos
+                        (especialmente piernas y glúteos), mejora el equilibrio
+                        y ayuda a mantener un peso saludable.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="about-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                        <line x1="9" y1="9" x2="9.01" y2="9" />
+                        <line x1="15" y1="9" x2="15.01" y2="9" />
+                      </svg>
+                    </div>
+                    <div class="about-content">
+                      <strong>Salud mental</strong>
+                      <p>
+                        Reduce los niveles de estrés y ansiedad. El contacto
+                        directo con la naturaleza mejora el estado de ánimo y
+                        despeja la mente.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="about-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      >
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      </svg>
+                    </div>
+                    <div class="about-content">
+                      <strong>Socialización</strong>
+                      <p>
+                        Es una excelente actividad para compartir tiempo de
+                        calidad con amigos, familia o grupos de caminantes.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="gallery-section">
+          <h2>Paisajes</h2>
+          <div class="gallery-container" id="gallery-container"></div>
+        </section>
+        <section class="section" id="routes-section">
+          <h2>Rutas</h2>
+          <div id="routes-container" class="routes-container"></div>
+        </section>
+        <section class="section" id="safety-section">
+          <div class="safety-container">
+            <h2 class="safety-title">Consejos de Seguridad</h2>
+            <p class="safety-intro">
+              El senderismo es una actividad segura cuando se realiza en rutas
+              señalizadas y con equipamiento adecuado. Sigue estas
+              recomendaciones esenciales para dominar la altura con seguridad.
+            </p>
+
+            <div class="safety-grid">
+              <div class="safety-card">
+                <div class="safety-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon
+                      points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"
+                    ></polygon>
+                    <line x1="9" y1="3" x2="9" y2="18"></line>
+                    <line x1="15" y1="6" x2="15" y2="21"></line>
+                  </svg>
+                </div>
+                <h3>Planificación y Ruta</h3>
+                <ul>
+                  <li>Infórmate sobre la distancia, tiempo y terreno.</li>
+                  <li>Descarga un mapa digital u offline.</li>
+                  <li>Usa GPS para mantenerte siempre en el sendero.</li>
+                </ul>
+              </div>
+
+              <div class="safety-card">
+                <div class="safety-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                    ></path>
+                    <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                  </svg>
+                </div>
+                <h3>Indumentaria Técnica</h3>
+                <ul>
+                  <li>Calzado de montaña con buen agarre.</li>
+                  <li>Ropa cómoda y transpirable.</li>
+                  <li>Sudadera térmica y un impermeable (paraguas).</li>
+                </ul>
+              </div>
+
+              <div class="safety-card">
+                <div class="safety-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="4.22" x2="19.78" y2="5.64"></line>
+                  </svg>
+                </div>
+                <h3>Protección Solar</h3>
+                <ul>
+                  <li>Gafas de sol con filtro UV.</li>
+                  <li>Gorra o sombrero de ala ancha.</li>
+                  <li>Protector solar de amplio espectro.</li>
+                </ul>
+              </div>
+
+              <div class="safety-card">
+                <div class="safety-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                </div>
+                <h3>Provisiones Base</h3>
+                <ul>
+                  <li>Abundante agua para toda la jornada.</li>
+                  <li>Snacks, frutos secos y alimentos energéticos.</li>
+                  <li>Botiquín básico de primeros auxilios.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column brand">
+          <a href="#" class="footer-logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 100 100"
+              width="32"
+              height="32"
+            >
+              <line
+                x1="20"
+                y1="85"
+                x2="50"
+                y2="15"
+                stroke="#f8f9fa"
+                stroke-width="9"
+                stroke-linecap="round"
+              />
+              <line
+                x1="50"
+                y1="15"
+                x2="80"
+                y2="85"
+                stroke="#f8f9fa"
+                stroke-width="9"
+                stroke-linecap="round"
+              />
+              <polyline
+                points="35,85 50,55 65,85"
+                stroke="#e67e22"
+                stroke-width="9"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
+            ALTIVOK
+          </a>
+          <p>Donde el sendero se convierte en cumbre.</p>
+          <div class="social-media">
+            <a href="#" aria-label="Instagram"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"
+                ></path>
+                <polygon
+                  points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                ></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-column links">
+          <h3>EXPLORA</h3>
+          <ul>
+            <li><a href="#about-section">Acerca de</a></li>
+            <li><a href="#routes-section">Rutas Populares</a></li>
+            <li><a href="#gallery-section">Galería</a></li>
+            <li><a href="#safety-section">Consejos de Seguridad</a></li>
+          </ul>
+        </div>
+        <div class="footer-column newsletter">
+          <h3>Suscríbete para recibir nuevas rutas y aventuras</h3>
+          <form action="#" method="POST" class="newsletter-form">
+            <input type="email" placeholder="Enviar email address" required />
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Altivok - Donde el sendero se convierte en cumbre. Todos
+          los Derechos Reservados.
+        </p>
+        <div class="legal-links">
+          <a href="#">Aviso Legal</a>
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </footer>
+    <template id="gallery-template">
+      <div class="gallery-item">
+        <a href="#route-1-section">
+          <img
+            class="gallery-image"
+            src="./assets/images/landscape-1-thumb.webp"
+            alt="Senderismo"
+          />
+        </a>
+      </div>
+    </template>
+    <template id="route-card-template">
+      <section class="route" id="route-1-section">
+        <div class="route-content">
+          <section class="route-header">
+            <div class="heart-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="none"
+                class="heart-icon"
+              >
+                <g
+                  stroke="#2c3e50"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  />
+
+                  <path d="M7 16 L12 8 L17 16" />
+                </g>
+
+                <g
+                  stroke="#e67e22"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9,16 12,11 15,16" />
+                </g>
+              </svg>
+              <span class="heart-count">0</span>
+            </div>
+            <img src="./assets/images/landscape-1.webp" alt="Senderismo" />
+          </section>
+          <section class="route-body">
+            <h3 class="route-title">Buena Vista</h3>
+            <div class="route-info-container">
+              <div class="route-info">
+                <div class="route-info-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2C5E3B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="6" cy="19" r="3"></circle>
+                    <path
+                      d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"
+                    ></path>
+                    <circle cx="18" cy="5" r="3"></circle>
+                  </svg>
+                </div>
+                <span>3.5 km</span>
+              </div>
+              <div class="route-info">
+                <div class="route-info-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2C5E3B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="18" y="4" width="4" height="16" rx="1"></rect>
+                    <rect x="10" y="10" width="4" height="10" rx="1"></rect>
+                    <rect x="2" y="16" width="4" height="4" rx="1"></rect>
+                  </svg>
+                </div>
+                <span>Fácil</span>
+              </div>
+              <div class="route-info">
+                <div class="route-info-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#2C5E3B"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <span>3 hrs</span>
+              </div>
+            </div>
+            <p class="route-description"></p>
+          </section>
+          <hr class="route-divider" />
+          <section class="route-comments">
+            <form class="route-comments-form">
+              <textarea
+                class="route-comments-textarea"
+                placeholder="Escribe tu comentario"
+              ></textarea>
+              <button type="submit" class="route-comments-button">
+                Enviar
+              </button>
+            </form>
+            <ul class="route-comments-list"></ul>
+          </section>
+        </div>
+      </section>
+    </template>
+    <template id="loading-template">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        width="60"
+        height="60"
+        fill="none"
+        class="loading-altivok"
+      >
+        <g class="loading-group">
+          <polyline
+            points="20,85 50,20 80,85"
+            stroke="#2c3e50"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="base-mountain"
+          />
+
+          <polyline
+            points="20,85 50,20 80,85"
+            stroke="#e67e22"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="active-trail"
+          />
+
+          <polyline
+            points="35,85 50,55 65,85"
+            stroke="#edf2f7"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            class="base-snow"
+          />
+        </g>
+      </svg>
+    </template>
+    <script src="./env-config.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

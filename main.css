@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap");
+@import url("./molecules/header/header.css");
+@import url("./organisms/gallery/gallery.css");
+@import url("./organisms/routes/routes.css");
+@import url("./organisms/route/route.css");
+@import url("./molecules/footer/footer.css");
+@import url("./molecules/safety/safety.css");
+@import url("./molecules/about/about.css");
+@import url("./atoms/loading/loading.css");
+
+:root {
+  --header-color: #d4b895;
+  --header-text-color: #352a22;
+  --section-background-color: rgba(232, 225, 211, 0.95);
+  --section-text-color: #352a22;
+  --shadow-section: rgba(53, 42, 34, 0.25);
+
+  --button-background-color: #527e53;
+  --button-text-color: #ffffff;
+
+  --alternative-text-color: #424e45;
+  --text-dark: #1a202c;
+  --text-muted: #4a5568;
+  --text-subtitle: #2d3748;
+  --text-muted-light: #a0aec0;
+  --border-light: #edf2f7;
+
+  --accent-color: #e67e22;
+  --accent-bg-light: rgba(230, 126, 34, 0.1);
+  --accent-bg-medium: rgba(230, 126, 34, 0.15);
+
+  --footer-bg: #1c2329;
+  --footer-text: #e2e8f0;
+  --footer-titles: #f8ecdf;
+  --footer-accent: #e67e22;
+  --footer-input-bg: #2c3640;
+  --footer-border: #2d3748;
+
+  --white: #ffffff;
+  --white-05: rgba(255, 255, 255, 0.05);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --border-gray: #dee2e6;
+  --bg-light: #f8f9fa;
+  --gallery-placeholder-bg: #e9ecef;
+
+  --overlay-light: rgba(0, 0, 0, 0.05);
+  --shadow-header: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 4px rgba(0, 0, 0, 0.08);
+  --shadow-soft: rgba(0, 0, 0, 0.2);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-overlay: rgba(0, 0, 0, 0.5);
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background: url("./assets/images/background.webp") no-repeat center center fixed;
+  background-size: cover;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+.main {
+  padding: 2rem 10vw;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--section-background-color);
+  box-shadow: 0 5px 20px var(--shadow-section);
+  color: var(--section-text-color);
+  padding: 3rem 0 4rem 0;
+}
+
+.list-item {
+  margin-bottom: 1rem;
+}
+
+section:target {
+  animation: highlight 1s ease-in-out;
+}
+
+.section {
+  scroll-margin-top: 64px;
+  padding: 2rem 4rem;
+}
+
+.section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: white;
+  }
+  25% {
+    background-color: var(--section-background-color);
+  }
+  50% {
+    background-color: white;
+  }
+  75% {
+    background-color: var(--section-background-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 0;
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+
+  .section {
+    padding: 0;
+  }
+}
