@@ -1,6 +1,7 @@
 import { HeaderModel, HeaderView, HeaderController } from './molecules/header/index.js'
 import { RoutesModel, RoutesView, RoutesController } from './organisms/routes/index.js'
 import { GalleryModel, GalleryView, GalleryController } from './organisms/gallery/index.js'
+import { NewsletterModel, NewsletterView, NewsletterController } from './organisms/newsletter/index.js'
 
 document.addEventListener('DOMContentLoaded', async () => {
 
@@ -15,4 +16,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const routesModel = new RoutesModel();
   const routesView = new RoutesView('routes-container');
   new RoutesController(routesModel, routesView);
+
+  const newsletterModel = new NewsletterModel();
+  const newsletterView = new NewsletterView();
+  new NewsletterController(newsletterModel, newsletterView);
 });

@@ -489,9 +489,22 @@
         </div>
         <div class="footer-column newsletter">
           <h3>Suscríbete para recibir nuevas rutas y aventuras</h3>
-          <form action="#" method="POST" class="newsletter-form">
-            <input type="email" placeholder="Enviar email address" required />
-            <button type="submit">Enviar</button>
+          <form
+            action="#"
+            method="POST"
+            class="newsletter-form"
+            id="newsletter-form"
+          >
+            <fieldset>
+              <input
+                type="email"
+                placeholder="Enviar email address"
+                id="newsletter-email"
+                required
+              />
+              <button type="submit">Enviar</button>
+            </fieldset>
+            <div id="newsletter-message" class="newsletter-message"></div>
           </form>
         </div>
       </div>
