@@ -16,7 +16,7 @@ export class NewsletterController {
           this.view.clearMessage();
         }, 5000);
       } catch (error) {
-        this.view.showMessage("Hubo un error al suscribirte. Por favor, intenta nuevamente más tarde.", true);
+        this.view.showMessage("Ya estás suscrito a nuestro newsletter.", true);
         console.error("Error al suscribirse al newsletter:", error);
       }
     } else {
