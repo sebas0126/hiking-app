@@ -1,6 +1,7 @@
 # Como correr
 
-1. Crear un archivo **env-config.js** que contenga el siguiente codigo
+1. Clonar este repositorio usando *GIT*
+2. Crear un archivo **env-config.js** que contenga el siguiente codigo en la raiz del proyecto
 ```javascript
 window._env_= {
     API_HOSTNAME: 'http://localhost:3001'
